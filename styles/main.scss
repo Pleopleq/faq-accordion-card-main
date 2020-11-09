@@ -1,12 +1,12 @@
 @use "./variables.scss" as *;
 
-*{
+* {
     margin: 0;
     padding: 0;
     line-height:1;
 }
 
-body{
+html {
     background: #ff0084;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to bottom, $Soft-violet, $Soft-blue);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to bottom, $Soft-violet, $Soft-blue); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -14,19 +14,22 @@ body{
     height: 100vh;
     font-family: 'Kumbh Sans', sans-serif;
     font-size: $Font-size;
+    box-sizing: content-box;
+
 }
 
 
-
-.container{
+.container {
     background: white;
     display: flex;
     flex-direction: column;
     height: 80%;
     margin: 10rem 2rem 1rem 2rem;
-    border-radius: 12px;
+    border-radius: 24px;
+    -webkit-box-shadow: 2px 35px 50px -11px rgba(0,0,0,0.49); 
+    box-shadow: 2px 35px 50px -11px rgba(0,0,0,0.49);
 
-    .hero{
+    .hero {
         position: absolute;
         top: 7%;
         z-index: 2;
@@ -37,7 +40,7 @@ body{
         text-align: center;
     }
         
-    .hero-shadow{
+    .hero-shadow {
         position: absolute; 
         top: 21%;
         z-index: 1;
@@ -50,14 +53,41 @@ body{
 
 }
 
+.content {
+    margin-top: 6rem;
+    padding: 7rem 2rem 4rem 2rem;
 
-
-.content{
-    margin-top: 2rem;
-    padding: 7rem 2rem 2rem 2rem;
-    .content-header{
+    .content-header {
         text-align: center;
         font-size: 2rem;
         line-height: 2em;
+    }
+}
+
+.dropdowns {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+
+    .dropdowns-option {
+    background-image: url('../images/icon-arrow-down.svg');
+    background-position: right center;
+    background-repeat: no-repeat;
+    padding: 1rem 0 1rem 0;
+    }
+
+    .dropdowns-container {
+        border-bottom: $Light-grayish-blue 1px solid;
+    }
+
+    .dropdowns-dropdown{
+        list-style-type: none;
+        padding: 0rem 0 0.8rem 0;
+
+        .dropdowns-dropdown__hidden{
+            display: none;
+            padding-right: 12px;
+        }
     }
 }
