@@ -66,10 +66,19 @@ html {
   padding-top: 1rem;
 }
 .dropdowns .dropdowns-option {
-  background-image: url("../images/icon-arrow-down.svg");
-  background-position: right center;
-  background-repeat: no-repeat;
   padding: 1rem 0 1rem 0;
+}
+.dropdowns .dropdowns-option:hover {
+  font-weight: 700;
+}
+.dropdowns .dropdowns-option__icon {
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  -ms-transition: -ms-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  float: right;
+}
+.dropdowns .dropdowns-option__iconRotate {
+  transform: rotate(180deg);
 }
 .dropdowns .dropdowns-container {
   border-bottom: #e7e7e9 1px solid;
@@ -81,6 +90,33 @@ html {
 .dropdowns .dropdowns-dropdown .dropdowns-dropdown__hidden {
   display: none;
   padding-right: 12px;
+}
+
+.fade-in {
+  -webkit-animation: fade-in 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+/**
+ * ----------------------------------------
+ * animation fade-in
+ * ----------------------------------------
+ */
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -71,11 +71,25 @@ html {
     padding-top: 1rem;
 
     .dropdowns-option {
-    background-image: url('../images/icon-arrow-down.svg');
-    background-position: right center;
-    background-repeat: no-repeat;
-    padding: 1rem 0 1rem 0;
+        padding: 1rem 0 1rem 0;
+        
     }
+
+    .dropdowns-option:hover {
+        font-weight: 700;
+    }
+
+    .dropdowns-option__icon {
+    -webkit-transition: -webkit-transform .3s ease-in-out;
+    -ms-transition: -ms-transform .3s ease-in-out;
+    transition: transform .3s ease-in-out; 
+    float: right;
+    }
+
+    .dropdowns-option__iconRotate {
+        transform: rotate(180deg);
+    } 
+    
 
     .dropdowns-container {
         border-bottom: $Light-grayish-blue 1px solid;
@@ -91,3 +105,30 @@ html {
         }
     }
 }
+
+.fade-in {
+    -webkit-animation: fade-in 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    animation: fade-in 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  }
+  
+/**
+ * ----------------------------------------
+ * animation fade-in
+ * ----------------------------------------
+ */
+ @-webkit-keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
