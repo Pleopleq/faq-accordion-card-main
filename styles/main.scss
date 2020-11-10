@@ -15,7 +15,6 @@ html {
     font-family: 'Kumbh Sans', sans-serif;
     font-size: $Font-size;
     box-sizing: content-box;
-
 }
 
 
@@ -72,18 +71,13 @@ html {
 
     .dropdowns-option {
         padding: 1rem 0 1rem 0;
-        
     }
-
-    .dropdowns-option:hover {
-        font-weight: 700;
-    }
-
+    
     .dropdowns-option__icon {
-    -webkit-transition: -webkit-transform .3s ease-in-out;
-    -ms-transition: -ms-transform .3s ease-in-out;
-    transition: transform .3s ease-in-out; 
-    float: right;
+        -webkit-transition: -webkit-transform .3s ease-in-out;
+        -ms-transition: -ms-transform .3s ease-in-out;
+        transition: transform .3s ease-in-out; 
+        float: right;
     }
 
     .dropdowns-option__iconRotate {
@@ -104,6 +98,67 @@ html {
             padding-right: 12px;
         }
     }
+}
+
+@media (min-width: 1024px) {
+    .dropdowns-option:hover {
+        font-weight: 700;   
+    }
+
+    .container {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        margin-left: 6rem;
+        margin-right: 6rem;
+        position: relative;
+        overflow: hidden;
+
+        .hero {
+            position: absolute;
+            top: 13%;
+            z-index: 2;
+            margin-left: auto;
+            margin-right: auto;
+            left: -59%;
+            right: 0;
+            text-align: center;
+            width: 460px;
+            content: url("../images/illustration-woman-online-desktop.svg");
+        }
+        
+        .hero-shadow {
+            position: absolute;
+            top: -28%;
+            z-index: 1;
+            margin-left: auto;
+            margin-right: auto;
+            left: -100%;
+            right: 0;
+            text-align: center;
+            content: url("../images/bg-pattern-desktop.svg");
+            width: 850px;
+        }
+
+        .content {
+        padding: 3rem 2rem 3rem 0;
+        margin: 2rem 4rem 4rem 0rem;
+        float: right;
+
+            .content-header{
+                text-align: left;
+                padding-bottom: 1rem;
+            }
+
+            .dropdowns {
+                width: 30vw;
+                text-align: left;
+                font-size: 14px;
+                .dropdowns-option {
+                    padding: 1.8rem 0 1.8rem 0;
+                }
+            }
+        }
+    }  
 }
 
 .fade-in {
@@ -132,3 +187,4 @@ html {
       opacity: 1;
     }
   }
+
