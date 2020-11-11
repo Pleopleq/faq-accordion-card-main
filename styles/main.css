@@ -18,6 +18,10 @@ html {
   box-sizing: content-box;
 }
 
+.box-desktop {
+  display: none;
+}
+
 .container {
   background: white;
   display: flex;
@@ -94,6 +98,18 @@ html {
     font-weight: 700;
   }
 
+  .box-desktop {
+    display: block;
+    position: absolute;
+    top: 41%;
+    z-index: 3;
+    margin-left: auto;
+    margin-right: auto;
+    left: -87%;
+    right: 0;
+    text-align: center;
+  }
+
   .container {
     flex-direction: row-reverse;
     justify-content: space-between;
@@ -111,12 +127,12 @@ html {
     left: -59%;
     right: 0;
     text-align: center;
-    width: 460px;
+    width: 40rem;
     content: url("../images/illustration-woman-online-desktop.svg");
   }
   .container .hero-shadow {
     position: absolute;
-    top: -28%;
+    top: -42%;
     z-index: 1;
     margin-left: auto;
     margin-right: auto;
@@ -124,7 +140,7 @@ html {
     right: 0;
     text-align: center;
     content: url("../images/bg-pattern-desktop.svg");
-    width: 850px;
+    width: 75rem;
   }
   .container .content {
     padding: 3rem 2rem 3rem 0;
@@ -142,6 +158,37 @@ html {
   }
   .container .content .dropdowns .dropdowns-option {
     padding: 1.8rem 0 1.8rem 0;
+  }
+}
+@media (min-width: 1440px) {
+  html {
+    font-size: 14px;
+  }
+
+  .box-desktop {
+    left: -82%;
+    top: 36%;
+    width: 17rem;
+  }
+
+  .container {
+    margin-left: 10rem;
+    margin-top: 5rem;
+    margin-right: 10rem;
+  }
+  .container .content {
+    padding: 0;
+    margin-top: 3rem;
+  }
+  .container .hero {
+    top: 3%;
+    left: -68%;
+    width: 46rem;
+  }
+  .container .hero-shadow {
+    top: -49%;
+    left: -102%;
+    width: 73rem;
   }
 }
 .fade-in {
