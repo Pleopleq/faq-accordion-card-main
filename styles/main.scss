@@ -7,15 +7,26 @@
     box-sizing: border-box;
 }
 
-html {
-    background: #ff0084;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, $Soft-violet, $Soft-blue);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, $Soft-violet, $Soft-blue); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background-repeat: no-repeat;
-    height: 100vh;
+body {
+    background: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7));
+    background: linear-gradient(#af67e9, #6565e7);
     font-family: 'Kumbh Sans', sans-serif;
     font-size: $Font-size;
-    box-sizing: content-box;
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-top: 10em;
 }
 
 .box-desktop {
@@ -26,36 +37,35 @@ html {
     background: white;
     display: flex;
     flex-direction: column;
-    max-width: 28rem;
-    margin: 0 auto;
-    margin-top: 17vh;
+    width: 80%;
+    position: relative;
     border-radius: 24px;
     -webkit-box-shadow: 2px 35px 50px -11px rgba(0,0,0,0.49); 
     box-shadow: 2px 35px 50px -11px rgba(0,0,0,0.49);
 
-    .hero {
-        position: absolute;
-        top: 1%;
-        margin-left: auto;
-        margin-right: auto;
-        left: -22px;
-        right: 0;
-        width: 23rem;
-        height: 19rem;
-        background: url(../images/bg-pattern-mobile.svg) no-repeat center center fixed;
-        background-position-y: 11rem;
-        background-position-x: 6rem;
-        background-size: 20rem;    
+    .hero-container {
+        background: url(../images/bg-pattern-mobile.svg) no-repeat;
+        background-position: top center;
+        position: relative;
+        height: 115px;
+
+        .hero {
+            display: block;
+            position: absolute;
+            width: 266px;
+            height: 196px;
+            top: -107px;
+            left: 50%;
+            margin-left: -147px;
         }
+    }
 }
 
 .content {
-    margin-top: 6rem;
     padding: 6rem 2rem 4rem 2rem;
-    font-size: 1.2rem;
+
     .content-header {
         text-align: center;
-        font-size: 3rem;
         line-height: 2em;
     }
 }
