@@ -10,11 +10,18 @@
   <title>Frontend Mentor | FAQ Accordion Card</title>
 </head>
 <body>
-  
-  <img src="./images/illustration-box-desktop.svg" alt="illustration-box-desktop" class="box-desktop">
   <main class="container">
+
+    <div class="box-desktop">
+      <img src="./images/illustration-box-desktop.svg" alt="illustration-box-desktop" >
+    </div>
+
     <div class="hero-container">
-      <img src="./images/illustration-woman-online-mobile.svg" alt="illustration-woman-online-mobile" class="hero">
+      <picture>
+        <source media="(min-width:1024px)" srcset="images/illustration-woman-online-desktop.svg">
+          <img src="./images/illustration-woman-online-mobile.svg" alt="illustration-woman-online-mobile" class="hero">
+      </picture>
+      
     </div>
       
   <div class="content">

@@ -1,7 +1,6 @@
 * {
   margin: 0;
   padding: 0;
-  line-height: 1;
   box-sizing: border-box;
 }
 
@@ -29,13 +28,18 @@ body {
 
 .box-desktop {
   display: none;
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  margin-top: -40px;
+  left: -93px;
 }
 
 .container {
   background: white;
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 85%;
   position: relative;
   border-radius: 24px;
   -webkit-box-shadow: 2px 35px 50px -11px rgba(0, 0, 0, 0.49);
@@ -47,7 +51,7 @@ body {
   position: relative;
   height: 115px;
 }
-.container .hero-container .hero {
+.container .hero-container picture {
   display: block;
   position: absolute;
   width: 266px;
@@ -58,18 +62,17 @@ body {
 }
 
 .content {
-  padding: 6rem 2rem 4rem 2rem;
+  padding: 0.5rem 1rem 2rem 1rem;
 }
 .content .content-header {
   text-align: center;
-  line-height: 2em;
 }
 
 .dropdowns {
   list-style-type: none;
   display: flex;
   flex-direction: column;
-  padding-top: 1rem;
+  padding-top: 0.5rem;
 }
 .dropdowns .dropdowns-option {
   padding: 1rem 0 1rem 0;
@@ -96,58 +99,39 @@ body {
 }
 
 @media (min-width: 1024px) {
+  body {
+    padding: 3em 0;
+  }
+
   .dropdowns-option:hover {
     font-weight: 700;
   }
 
   .box-desktop {
     display: block;
-    position: absolute;
-    top: 41%;
-    z-index: 3;
-    margin-left: auto;
-    margin-right: auto;
-    left: -87%;
-    right: 0;
-    text-align: center;
   }
 
   .container {
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    margin-left: 6rem;
-    margin-right: 6rem;
-    position: relative;
+    max-width: 950px;
+    flex-direction: row;
+    column-gap: 2em;
+    background: url(../images/bg-pattern-desktop.svg) #fff no-repeat;
+    background-size: cover;
+    background-position: -550px -275px;
+  }
+  .container .hero-container {
+    flex: 1.2;
+    background: none;
+    width: 100%;
+    height: auto;
     overflow: hidden;
   }
-  .container .hero {
-    position: absolute;
-    top: 13%;
-    z-index: 2;
-    margin-left: auto;
-    margin-right: auto;
-    left: -59%;
-    right: 0;
-    text-align: center;
-    width: 40rem;
-    content: url("../images/illustration-woman-online-desktop.svg");
-  }
-  .container .hero-shadow {
-    position: absolute;
-    top: -42%;
-    z-index: 1;
-    margin-left: auto;
-    margin-right: auto;
-    left: -100%;
-    right: 0;
-    text-align: center;
-    content: url("../images/bg-pattern-desktop.svg");
-    width: 75rem;
+  .container .hero-container picture {
+    top: 77px;
+    left: 70px;
   }
   .container .content {
-    padding: 3rem 2rem 3rem 0;
-    margin: 2rem 4rem 4rem 0rem;
-    float: right;
+    padding: 3rem 3rem 3rem 0;
   }
   .container .content .content-header {
     text-align: left;
@@ -157,40 +141,6 @@ body {
     width: 30vw;
     text-align: left;
     font-size: 14px;
-  }
-  .container .content .dropdowns .dropdowns-option {
-    padding: 1.8rem 0 1.8rem 0;
-  }
-}
-@media (min-width: 1440px) {
-  html {
-    font-size: 14px;
-  }
-
-  .box-desktop {
-    left: -82%;
-    top: 36%;
-    width: 17rem;
-  }
-
-  .container {
-    margin-left: 10rem;
-    margin-top: 5rem;
-    margin-right: 10rem;
-  }
-  .container .content {
-    padding: 0;
-    margin-top: 3rem;
-  }
-  .container .hero {
-    top: 3%;
-    left: -68%;
-    width: 46rem;
-  }
-  .container .hero-shadow {
-    top: -49%;
-    left: -102%;
-    width: 73rem;
   }
 }
 .fade-in {
